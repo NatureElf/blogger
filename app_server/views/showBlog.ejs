@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+  </head>
+  <body>
+    <% include nav.ejs %>
+    <h1 class="mt-5 mb-5"><%= title %></h1>
+    <div class="container">
+      <% blogEntries.forEach(function(blogs){ %>
+        <div class="card bg-light mb-5 blog p-5">
+          <h1><%= blogs.blogTitle %></h1>
+          <p><%= blogs.blogText %></p>
+          <p><%= blogs.createdOn %></p>
+          <div class="buttons">
+            <a href="/blogs/edit" class="mr-1 text-decoration-none editButton btn-outline-primary">Edit</a>
+            <a href="/blogs/delete" class="ml-1 text-decoration-none deleteButton btn-outline-danger">Delete</a>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </body>
+</html> 
