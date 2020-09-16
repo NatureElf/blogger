@@ -8,20 +8,23 @@ a {
 }
 
 .editButton{
-  width: 75px;
-  padding: 5px;
-  border-radius: 5px;
-  border: 2px solid blue;
+  font-size: 24px;
+}
+
+.editButton:hover{
+  color: lime;
 }
 
 .deleteButton{
-  width: 75px;
-  padding: 6px;
-  border-radius: 6px;
-  border: 2px solid red;
+  font-size: 24px;
+}
+
+.deleteButton:hover{
+  color: red;
 }
 
 .buttons {
   display: flex;
   width: fit-content;
 }
+

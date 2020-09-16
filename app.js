@@ -22,7 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 // redirect CSS bootstrap
-app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); 
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+app.use('/css', express.static(__dirname + '/public/stylesheets'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

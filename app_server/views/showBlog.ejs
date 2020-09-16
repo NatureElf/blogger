@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <% include nav.ejs %>
@@ -15,8 +16,8 @@
           <p><%= blogs.blogText %></p>
           <p><%= blogs.createdOn %></p>
           <div class="buttons">
-            <a href="/blogs/edit" class="mr-1 text-decoration-none editButton btn-outline-primary">Edit</a>
-            <a href="/blogs/delete" class="ml-1 text-decoration-none deleteButton btn-outline-danger">Delete</a>
+            <a class="nav-link editButton" href="/blogs/edit"><i class="fa fa-edit"></i></a>
+            <a class="nav-link deleteButton" href="/blogs/delete"><i class="fa fa-trash"></i></a>
           </div>
         </div>
       <% }) %>
