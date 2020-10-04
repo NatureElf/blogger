@@ -28,3 +28,63 @@ a {
   width: fit-content;
 }
 
+form{
+  text-align: center;
+}
+
+form input, form textarea{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text {
+  height: 250px;
+}
+
+.submit {
+  width: 20%;
+}
+
+#cancel {
+  text-decoration: none;
+  color: black;
+}
+
+#cancelbtn {
+  text-align: center;
+}
+
+#submitbtn { 
+  border: 2px solid black;
+  border-radius: 225px;
+  background-color: #eeb111;
+  outline: none;
+  outline-style: none;
+}
+
+#deletebtn {
+  border: 2px solid black;
+  color: white;
+  border-radius: 225px;
+  background-color: red;
+  outline: none;
+  outline-style: none;
+}
+
+#savebtn {
+  border: 2px solid black;
+  color: white;
+  border-radius: 225px;
+  background-color: #00B7FF;
+  outline: none;
+  outline-style: none;
+}
+
+#thenav a:hover{
+  color: #eeb111;
+}
+
+#thenav {
+  box-shadow: 0px 0px 15px 5px rgb(95, 94, 94);
+}

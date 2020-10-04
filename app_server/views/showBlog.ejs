@@ -8,16 +8,16 @@
   </head>
   <body>
     <% include nav.ejs %>
-    <h1 class="mt-5 mb-5"><%= title %></h1>
     <div class="container">
+      <h1 class="mt-5 mb-5"><%= title %></h1>
       <% blogEntries.forEach(function(blogs){ %>
         <div class="card bg-light mb-5 blog p-5">
           <h1><%= blogs.blogTitle %></h1>
           <p><%= blogs.blogText %></p>
           <p><%= blogs.createdOn %></p>
           <div class="buttons">
-            <a class="nav-link editButton" href="/blogs/edit"><i class="fa fa-edit"></i></a>
-            <a class="nav-link deleteButton" href="/blogs/delete"><i class="fa fa-trash"></i></a>
+            <a class="nav-link editButton" href=<%="/blogs/edit/" + blogs._id %>><i class="fa fa-edit"></i></a>
+            <a class="nav-link deleteButton" href=<%="/blogs/delete/" + blogs._id %>><i class="fa fa-trash"></i></a>
           </div>
         </div>
       <% }) %>

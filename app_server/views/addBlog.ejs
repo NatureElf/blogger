@@ -7,7 +7,15 @@
   </head>
   <body>
     <% include nav.ejs %>
-    <h1 class="mt-5"><%= title %></h1>
-    <p>This page is temporary under construction. Please visit soon to see finished product!</p>
+    <div class="container">
+      <div>
+        <form method="POST" class="card bg-light">
+          <h1 class="mt-4"><%= title %></h1>
+          <input type="text" name="blogTitle" placeholder="Blog Title" class="title mt-5">
+          <textarea name="blogText" placeholder="Enter Blog Text" class="text my-5"></textarea>
+          <input type="submit" value="Submit" id="submitbtn" class="submit mb-5">
+        </form>
+      </div>
+    </div>
   </body>
 </html>
