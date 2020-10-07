@@ -12,8 +12,10 @@
       <h1 class="mt-5 mb-5"><%= title %></h1>
       <% blogEntries.forEach(function(blogs){ %>
         <div class="card bg-light mb-5 blog p-5">
-          <h1><%= blogs.blogTitle %></h1>
-          <p><%= blogs.blogText %></p>
+          <h2><%= blogs.blogTitle %></h2>
+	  <hr>
+          <pre><%= blogs.blogText %></pre>
+	  <hr>
           <p><%= blogs.createdOn %></p>
           <div class="buttons">
             <a class="nav-link editButton" href=<%="/blogs/edit/" + blogs._id %>><i class="fa fa-edit"></i></a>
