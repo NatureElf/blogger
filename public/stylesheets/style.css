@@ -4,7 +4,7 @@ body {
 }
 
 pre {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; 
   overflow-x: auto;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
