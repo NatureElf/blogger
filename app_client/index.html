@@ -12,17 +12,12 @@
     <title>Nick's Blog</title>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav id="thenav" class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="#/">My Blog</a>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#/blogs">List Blogs</a>
-            <a class="nav-item nav-link active" href="#/blogs/add">Add Blog</a>
-            </div>
-        </div>
-    </nav>
- 
+    <!-- Navigation Directive -->    
+    <div ng-controller="NavigationController">
+        <navigation></navigation>  
+    </div>  					
+	
+    
     <!-- Angular Templates -->
     <!-- Home Page -->
     <script type="text/ng-template" id="home.html">
@@ -41,8 +36,8 @@
             <hr>
                 <p>{{ blog.createdOn }}</p>
                 <div class="buttons">
-                  <a class="nav-link editButton" href="#/blogs/edit/{{ blog._id }}"><i class="fa fa-edit"></i></a>
-                  <a class="nav-link deleteButton" href="#/blogs/delete/{{ blog._id }}"><i class="fa fa-trash"></i></a>
+                  <a ng-show="vm.isLoggedIn()" class="nav-link editButton" href="#/blogs/edit/{{ blog._id }}"><i class="fa fa-edit"></i></a>
+                  <a ng-show="vm.isLoggedIn()" class="nav-link deleteButton" href="#/blogs/delete/{{ blog._id }}"><i class="fa fa-trash"></i></a>
                 </div>
               </div>
           </div>
@@ -100,9 +95,62 @@
         </div>
     </script>
 
+
+    <script type="text/ng-template" id="register.html">
+        <div class="container">
+            <div id="loginForm" class="card bg-light">
+                <h1 class="mt-4 ">Register</h1>
+                <p class="mt-2">Already a member? Please <a id="heading" href="#/login">log in</a> instead.</p>
+                <form ng-submit="vm.onSubmit()">
+                    <div role="alert" ng-show="vm.formError" class="alert alert-danger">{{ vm.formError }}</div>
+                    <div class="form-group">
+                        <label for="name">Full name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" ng-model="vm.credentials.name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="vm.credentials.email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="vm.credentials.password">
+                    </div>
+                    <div>
+                        <input type="submit" value="Sign In!" class="submit mt-3 mb-5" id="submitbtn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="login.html">
+        <div class="container">
+            <div id="loginForm" class="card bg-light">
+                <h1 class="mt-4 ">Login</h1>
+                <p class="mt-2">Not a member? Please <a id="heading" href="#/register">register</a> first.</p>
+                <form ng-submit="vm.onSubmit()">
+                    <div role="alert" ng-show="vm.formError" class="alert alert-danger">{{ vm.formError }}</div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="vm.credentials.email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="vm.credentials.password">
+                    </div>
+                    <div>
+                        <input type="submit" value="Sign In!" class="submit mt-3 mb-5" id="submitbtn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </script>
+
     <!-- Angular Render View -->
     <div ng-view></div>
 
     <script src="/angular/bloggerApp.js"></script>
+    <script src="/nav/navigation.js"></script>
+    <script src="/auth/authentication.js"></script>
 </body>
 </html>

@@ -1,9 +1,13 @@
+require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var passport = require('passport');
 require('./app_api/models/db');
+require('./app_api/models/users');
+require('./app_api/config/passport');
 
 //var indexRouter = require('./app_server/routes/index');
 var routesApi = require('./app_api/routes/index');
@@ -23,6 +27,9 @@ app.use('/angular', express.static(path.join(__dirname , 'node_modules' , 'angul
 app.use('/angular', express.static(path.join(__dirname , 'node_modules' , 'angular-route')));
 app.use('/angular', express.static(path.join(__dirname , 'node_modules' , 'angular-ui-router', 'release')));
 app.use('/angular',express.static(path.join(__dirname , 'app_client')));
+app.use('/nav',express.static(path.join(__dirname , 'app_client', 'common','nav')));
+app.use('/auth',express.static(path.join(__dirname , 'app_client', 'common', 'auth')));
+app.use(passport.initialize());
 
 //app.use('/', indexRouter);
 app.use('/api', routesApi);
@@ -38,6 +45,14 @@ app.use(function (req, res) {
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
+});
+
+// Handle auth error
+app.use(function (err, req, res, next) {
+  if (err.name === "UnauthorizedError") {
+    res.status(401);
+    res.json({ message: err.name + ": " + err.message });
+  }
 });
 
 // error handler
