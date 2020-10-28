@@ -10021,3 +10021,116 @@ Error: Failed to lookup view "error" in views directory "/home/bitnami/Lab5/view
 [0mGET / [32m200 [0m0.623 ms - 4925[0m
 [0mGET / [32m200 [0m0.536 ms - 4925[0m
 Mongoose connected to mongodb://blogs:blogs1234@localhost:27017/blogger
+[0mGET / [36m304 [0m5.341 ms - -[0m
+[0mGET /angular/angular.min.js [36m304 [0m1.104 ms - -[0m
+[0mGET /angular/angular-route.min.js [36m304 [0m2.228 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.656 ms - -[0m
+[0mGET /auth/authentication.js [36m304 [0m3.227 ms - -[0m
+[0mGET /nav/navigation.js [36m304 [0m3.224 ms - -[0m
+[0mGET /css/bootstrap.min.css [36m304 [0m2.601 ms - -[0m
+[0mGET /angular/angular-ui-router.min.js [36m304 [0m3.842 ms - -[0m
+[0mGET /angular/bloggerApp.js [36m304 [0m4.819 ms - -[0m
+[0mGET /nav/navigation.html [36m304 [0m0.573 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.579 ms - -[0m
+[0mGET / [32m200 [0m3.337 ms - 7545[0m
+[0mGET /angular/angular-route.min.js [32m200 [0m2.334 ms - 4595[0m
+[0mGET /stylesheets/style.css [32m200 [0m1.274 ms - 1568[0m
+[0mGET /angular/angular.min.js [32m200 [0m1.218 ms - 158915[0m
+[0mGET /nav/navigation.js [32m200 [0m1.395 ms - 790[0m
+[0mGET /angular/bloggerApp.js [32m200 [0m1.827 ms - 5472[0m
+[0mGET /auth/authentication.js [32m200 [0m0.634 ms - 3784[0m
+[0mGET /angular/angular-ui-router.min.js [32m200 [0m3.217 ms - 114858[0m
+[0mGET /css/bootstrap.min.css [32m200 [0m2.650 ms - 160302[0m
+[0mGET /nav/navigation.html [32m200 [0m2.058 ms - 686[0m
+[0mGET /favicon.ico [32m200 [0m0.674 ms - 7545[0m
+[
+  {
+    createdOn: '10/4/2020',
+    _id: 5f7bdb8073e09f7dbf14b6d8,
+    blogTitle: 'Blog #1',
+    blogText: 'Welcome to my blog.\n' +
+      '\n' +
+      "In today's post, we will be talking about how I came up with this website.\n" +
+      '\n' +
+      'Thanks,\n' +
+      '\n' +
+      'Nick L\n',
+    __v: 0
+  },
+  {
+    createdOn: '10/7/2020',
+    _id: 5f7d0e2bbdcbe228653ef8d7,
+    blogTitle: 'Blog #2',
+    blogText: 'Welcome to my blog\n' +
+      '\n' +
+      'What is Lorem Ipsum?\n' +
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n" +
+      '\n' +
+      'Why do we use it?\n' +
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n" +
+      '\n' +
+      '\n' +
+      'Where does it come from?\n' +
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n' +
+      '\n' +
+      'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\n' +
+      '\n' +
+      'Yay!',
+    __v: 0
+  }
+]
+[0mGET /api/blogs [36m304 [0m19.537 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.521 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.659 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m2.331 ms - -[0m
+[
+  {
+    createdOn: '10/4/2020',
+    _id: 5f7bdb8073e09f7dbf14b6d8,
+    blogTitle: 'Blog #1',
+    blogText: 'Welcome to my blog.\n' +
+      '\n' +
+      "In today's post, we will be talking about how I came up with this website.\n" +
+      '\n' +
+      'Thanks,\n' +
+      '\n' +
+      'Nick L\n',
+    __v: 0
+  },
+  {
+    createdOn: '10/7/2020',
+    _id: 5f7d0e2bbdcbe228653ef8d7,
+    blogTitle: 'Blog #2',
+    blogText: 'Welcome to my blog\n' +
+      '\n' +
+      'What is Lorem Ipsum?\n' +
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n" +
+      '\n' +
+      'Why do we use it?\n' +
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n" +
+      '\n' +
+      '\n' +
+      'Where does it come from?\n' +
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n' +
+      '\n' +
+      'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\n' +
+      '\n' +
+      'Yay!',
+    __v: 0
+  }
+]
+[0mGET /api/blogs [36m304 [0m4.014 ms - -[0m
+[0mGET /favicon.ico [36m304 [0m0.620 ms - -[0m
+[0mGET / [36m304 [0m1.837 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.522 ms - -[0m
+[0mGET /css/bootstrap.min.css [36m304 [0m1.459 ms - -[0m
+[0mGET /angular/angular.min.js [36m304 [0m0.500 ms - -[0m
+[0mGET /angular/angular-route.min.js [36m304 [0m0.784 ms - -[0m
+[0mGET /angular/angular-ui-router.min.js [36m304 [0m1.571 ms - -[0m
+[0mGET /angular/bloggerApp.js [36m304 [0m0.733 ms - -[0m
+[0mGET /auth/authentication.js [36m304 [0m0.924 ms - -[0m
+[0mGET /nav/navigation.js [36m304 [0m0.926 ms - -[0m
+[0mGET /nav/navigation.html [36m304 [0m0.560 ms - -[0m
+[0mGET /favicon.ico [32m200 [0m0.742 ms - 7545[0m
+[0mPOST /UpgradeManager/sns/message/receive [32m200 [0m1.683 ms - 7545[0m
+Mongoose connected to mongodb://blogs:blogs1234@localhost:27017/blogger

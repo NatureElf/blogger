@@ -116,6 +116,10 @@ form input, form textarea{
   margin-right: auto;
 }
 
-#loginForm h1, p{
+#loginForm h1{
+  text-align: center;
+}
+
+#Titlemessage {
   text-align: center;
 }
