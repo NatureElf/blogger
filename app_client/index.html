@@ -34,10 +34,10 @@
             <hr>
                 <pre>{{ blog.blogText }}</pre>
             <hr>
-                <p>{{ blog.createdOn }}</p>
+                <p>Published by {{ blog.name }} on {{ blog.createdOn }}</p>
                 <div class="buttons">
-                  <a ng-show="vm.isLoggedIn()" class="nav-link editButton" href="#/blogs/edit/{{ blog._id }}"><i class="fa fa-edit"></i></a>
-                  <a ng-show="vm.isLoggedIn()" class="nav-link deleteButton" href="#/blogs/delete/{{ blog._id }}"><i class="fa fa-trash"></i></a>
+                  <a ng-show="vm.isCurrentUser(blog.email)" class="nav-link editButton" href="#/blogs/edit/{{ blog._id }}"><i class="fa fa-edit"></i></a>
+                  <a ng-show="vm.isCurrentUser(blog.email)" class="nav-link deleteButton" href="#/blogs/delete/{{ blog._id }}"><i class="fa fa-trash"></i></a>
                 </div>
               </div>
           </div>

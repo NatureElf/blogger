@@ -7,8 +7,17 @@ var blogSchema = new mongoose.Schema({
   blogText: String,
   createdOn: {
     type: String,
-    "default": dateNow
+    default: dateNow,
   },
+  email: {
+    type: String,
+    unique: true,
+    required: true,
+  },
+  name: {
+    type: String,
+    required: true,
+  }
 });
 
 mongoose.model('BlogEntry', blogSchema);

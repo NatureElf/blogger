@@ -55,6 +55,13 @@ app.controller("ListController", [ '$http','authentication', function ListContro
     vm.isLoggedIn = function () {
       return authentication.isLoggedIn();
     };
+
+    vm.isCurrentUser = function (email) {
+      if(authentication.isLoggedIn())
+      {
+        return authentication.currentUser().email == email;
+      }
+    };
     
     getAllBlogs($http)
       .success(function(data) {
@@ -75,6 +82,8 @@ app.controller("AddController", [ '$http', '$routeParams', '$state', 'authentica
       var data = vm.blog;
       data.blogTitle = addForm.blogTitle.value;
       data.blogText = addForm.blogText.value;
+      data.email = authentication.currentUser().email;
+      data.name = authentication.currentUser().name;
              
       addBlog($http, authentication, data)
         .success(function(data) {

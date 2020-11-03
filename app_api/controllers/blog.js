@@ -7,21 +7,24 @@ var sendJSONresponse = function (res, status, content) {
 };
 
 module.exports.addBlog = function(req, res) {
-  Blog
-   .create({
+  Blog.create(
+    {
       blogTitle: req.body.blogTitle,
       blogText: req.body.blogText,
-      createdOn: req.body.createdOn
-     }, function(err, blog) {
-       if (err) {
-          console.log(err);
-          sendJSONresponse(res, 400, err);
-       } else {
-          console.log(blog);
-          sendJSONresponse(res, 201, blog);
-       }
-     }
-   );
+      createdOn: req.body.createdOn,
+      email: req.body.email,
+      name: req.body.name
+    },
+    function (err, blog) {
+      if (err) {
+        console.log(err);
+        sendJSONresponse(res, 400, err);
+      } else {
+        console.log(blog);
+        sendJSONresponse(res, 201, blog);
+      }
+    }
+  );
 };  
 
 module.exports.showBlogs = function (req, res) {
@@ -50,6 +53,8 @@ var buildBlogList = function (req, res, results) {
       blogTitle: obj.blogTitle,
       blogText: obj.blogText,
       createdOn: obj.createdOn,
+      email: obj.email,
+      name: obj.name,
       _id: obj._id,
     });
   });

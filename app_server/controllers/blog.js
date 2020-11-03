@@ -107,7 +107,9 @@ module.exports.addBlog = function(req, res){
     postdata = {
         blogTitle: req.body.blogTitle,
         blogText: req.body.blogText,
-        createdOn: req.body.createdOn
+        createdOn: req.body.createdOn,
+        email: req.body.email,
+        name: req.body.name
     }; 
 
     requestOptions = {
